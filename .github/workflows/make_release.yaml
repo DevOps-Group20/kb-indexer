@@ -33,3 +33,15 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: sync indexers configuration
+        uses: adrianjost/files-sync-action@v2.1.0
+        with:
+          FILE_PATTERNS: |
+            ^indexers/notebook/entrypoint\.py$
+            ^indexers/dataset/repositories/(?!(common\.py|__init__\.py)$).+$
+          TARGET_REPOS: |
+            DevOps-Group20/kb-indexer-backend
+          TARGET_ROOT: |
+            indexconfig/
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FILES }}
