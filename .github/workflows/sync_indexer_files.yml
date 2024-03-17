@@ -15,5 +15,5 @@ jobs:
             DevOps-Group20/kb-indexer-backend
           TARGET_ROOT: |
             indexers/source_indexers
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_FILES }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FILES }}
 
