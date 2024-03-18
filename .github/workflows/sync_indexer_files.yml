@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync-files:
+  sync-indexer-files:
     runs-on: ubuntu-latest
     steps:
       - uses: adrianjost/files-sync-action@v2.1.0
@@ -17,4 +17,17 @@ jobs:
           TARGET_ROOT: |
             indexconfig/
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FILES }}
+          
+  sync-sources-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: adrianjost/files-sync-action@v2.1.0
+        with: 
+          FILE_PATTERNS: |
+            ^indexers\/api\/data_sources\/DB\/[^\/]+$
+            ^indexers\/dataset\/data_sources\/[^\/]+$
+            ^indexers\/notebook\/data_sources\/[^\/]+$
+            ^indexers\/web\/data_sources\/[^\/]+$
+
+            
 
