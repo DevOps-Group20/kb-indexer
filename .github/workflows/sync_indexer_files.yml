@@ -24,10 +24,10 @@ jobs:
       - uses: adrianjost/files-sync-action@v2.1.0
         with: 
           FILE_PATTERNS: |
-            ^indexers\/api\/data_sources\/DB\/[^\/]+$
-            ^indexers\/dataset\/data_sources\/[^\/]+$
-            ^indexers\/notebook\/data_sources\/[^\/]+$
-            ^indexers\/web\/data_sources\/[^\/]+$
+            ^indexers\/api\/data_sources\/DB\/.*[^\/]+$
+            ^indexers\/dataset\/data_sources\/.*[^\/]+$
+            ^indexers\/notebook\/data_sources\/.*[^\/]+$
+            ^indexers\/web\/data_sources\/.*[^\/]+$
           TARGET_REPOS: |
             DevOps-Group20/kb-indexer-backend
           TARGET_ROOT: |
