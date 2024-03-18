@@ -28,6 +28,8 @@ jobs:
             ^indexers\/dataset\/data_sources\/[^\/]+$
             ^indexers\/notebook\/data_sources\/[^\/]+$
             ^indexers\/web\/data_sources\/[^\/]+$
-
-            
-
+          TARGET_REPOS: |
+            DevOps-Group20/kb-indexer-backend
+          TARGET_ROOT: |
+            indexconfig/
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FILES }}
