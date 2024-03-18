@@ -31,5 +31,5 @@ jobs:
           TARGET_REPOS: |
             DevOps-Group20/kb-indexer-backend
           TARGET_ROOT: |
-            indexconfig/
+            indexconfig/sources
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FILES }}
